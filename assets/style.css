@@ -105,7 +105,7 @@ body {
   min-height: 100vh;
   background:
     linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.9)),
-    url('/..images/tornomecanico.jpg') center/cover;
+    url('\images/tornomecanico.jpg') center/cover;
   display: flex;
   align-items: center;
   color: var(--white);
