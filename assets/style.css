@@ -50,8 +50,8 @@ body {
 }
 
 .navbar-logo {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -956,6 +956,56 @@ footer {
 
 }
 
+
+/* =======================
+   CLIENTES
+======================= */
+
+.clients-section{
+    padding:90px 0;
+    background:#f8fafc;
+}
+
+.client-logo{
+    height:170px;
+    background:#fff;
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:25px;
+
+    border:1px solid #e8edf3;
+
+    transition:.35s;
+}
+
+.client-logo img{
+    max-width:150px;
+    max-height:140px;
+    width:auto;
+    height:auto;
+
+    filter: grayscale(100%);
+    opacity:.7;
+
+    transition:.35s;
+}
+
+.client-logo:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.client-logo:hover img{
+    filter:none;
+    opacity:1;
+    transform:scale(1.05);
+}
+
+
 /* ================================= */
 /* MAPA */
 /* ================================= */
@@ -1061,7 +1111,7 @@ footer {
 }
 
 .footer-logo span {
-  color: #f59e0b;
+  color: var(--accent2);
 }
 
 .footer-description {
