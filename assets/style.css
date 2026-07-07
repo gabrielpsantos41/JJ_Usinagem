@@ -157,7 +157,7 @@ body {
   min-height: 100vh;
   background:
     linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.9)),
-    url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=1600&auto=format&fit=crop') center/cover;
+    url('/images/fundo_barras.jpeg') center/cover;
   display: flex;
   align-items: center;
   color: var(--white);
@@ -377,7 +377,7 @@ section {
 .cta {
   background:
     linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)),
-    url('https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=1600&auto=format&fit=crop') center/cover;
+    url('/images/pecas2.jpeg') center/cover;
   color: var(--white);
   text-align: center;
   border-radius: 30px;
@@ -733,7 +733,7 @@ footer {
   padding: 100px 0;
   background:
     linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.92)),
-    url('https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=1600&auto=format&fit=crop') center/cover;
+    url('/images/pecas2.jpeg') center/cover;
   text-align: center;
   color: white;
 }
@@ -1282,4 +1282,37 @@ footer {
 html {
   scrollbar-width: thin;
   scrollbar-color: #f59e0b #0f172a;
+}
+
+
+.modal-content{
+    border-radius:20px;
+}
+
+.modal-body h3{
+    color:#0d1b2a;
+    font-weight:700;
+}
+
+.modal-body p{
+    font-size:17px;
+}
+
+.bi-check-circle-fill{
+    color:#22c55e !important;
+    animation:pop .4s ease;
+}
+
+@keyframes pop{
+
+    0%{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
 }
