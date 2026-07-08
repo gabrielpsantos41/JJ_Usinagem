@@ -34,7 +34,7 @@
   <meta name="twitter:image" content="https://www.jjusinagens.com.br/images/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo1.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -426,7 +426,7 @@
             <input
              type="hidden"
              name="redirectTo"
-             value="https://jjusinagens.com/index.html?sucesso=1">
+             value="https://jjusinagens.com.br/index.html">
 
           <!-- ASSUNTO PERSONALIZADO -->
           <input
@@ -500,13 +500,12 @@
             </div>
 
             <div class="col-12">
-              <button
-                id="submitBtn"
-                type="submit"
-                class="btn-primary-custom border-0">
-
-                Enviar mensagem
-              </button>
+             <button
+               type="submit"
+                 class="btn-primary-custom border-0"
+                id="btnEnviar">
+               Enviar mensagem
+            </button>
             </div>
 
           </div>
@@ -766,38 +765,56 @@
   <i class="bi bi-whatsapp"></i>
 </a>
 
-
 <div class="modal fade" id="successModal" tabindex="-1">
-
     <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
 
-        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0">
+                <h5 class="modal-title">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    Mensagem pronta para envio
+                </h5>
 
-            <div class="modal-body text-center p-5">
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+            </div>
 
-                <i class="bi bi-check-circle-fill text-success"
-                    style="font-size:70px;"></i>
+            <div class="modal-body">
 
-                <h3 class="mt-4">
-                    Mensagem enviada!
-                </h3>
+                Seu orçamento será enviado em alguns segundos.
 
-                <p class="text-muted mb-0">
+                <br><br>
 
-                    Recebemos seu orçamento com sucesso.
+                Caso não aconteça automaticamente, clique no botão abaixo.
 
-                    <br>
+            </div>
 
-                    Nossa equipe entrará em contato em breve.
+            <div class="modal-footer border-0">
 
-                </p>
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                    id="closeModalButton">
+
+                    Fechar
+
+                </button>
+
+                <button
+                    class="btn btn-warning"
+                    id="redirectNow">
+
+                    Enviar agora
+
+                </button>
 
             </div>
 
         </div>
-
     </div>
-
 </div>
 
 

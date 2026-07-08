@@ -10,69 +10,41 @@
       }
     });
 
-
     document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("contactForm");
+    const form = document.getElementById("orcamentoForm");
 
-    if (!form) return;
+    form.addEventListener("submit", function(event){
 
-    const button = document.getElementById("submitBtn");
+        event.preventDefault();
 
-    form.addEventListener("submit", async function (e) {
+        const modal = new bootstrap.Modal(
+            document.getElementById("successModal")
+        );
 
-        e.preventDefault();
+        modal.show();
 
-        button.disabled = true;
+        let enviado = false;
 
-        button.innerHTML = `
-            <span class="spinner-border spinner-border-sm me-2"></span>
-            Enviando...
-        `;
+        function enviarFormulario(){
 
-        const formData = new FormData(form);
+            if(enviado) return;
 
-        try {
+            enviado = true;
 
-            const response = await fetch(form.action, {
-
-                method: "POST",
-
-                body: formData
-
-            });
-
-            if (response.ok) {
-
-                form.reset();
-
-                const modal = new bootstrap.Modal(
-                    document.getElementById("successModal")
-                );
-
-                modal.show();
-
-                setTimeout(() => {
-
-                    modal.hide();
-
-                }, 3000);
-
-            } else {
-
-                alert("Não foi possível enviar sua mensagem.");
-
-            }
-
-        } catch (error) {
-
-            alert("Erro ao enviar. Tente novamente.");
+            form.submit();
 
         }
 
-        button.disabled = false;
+        setTimeout(enviarFormulario,3000);
 
-        button.innerHTML = "Enviar mensagem";
+        document
+            .getElementById("redirectNow")
+            .addEventListener("click", enviarFormulario);
+
+        document
+            .getElementById("closeModalButton")
+            .addEventListener("click", enviarFormulario);
 
     });
 
