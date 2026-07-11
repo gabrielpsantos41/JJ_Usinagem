@@ -987,6 +987,9 @@ footer {
     max-height:140px;
     width:auto;
     height:auto;
+      pointer-events: none; 
+    user-select: none;     
+    -webkit-user-drag: none; 
 
     filter: grayscale(100%);
     opacity:.7;
@@ -997,12 +1000,17 @@ footer {
 .client-logo:hover{
     transform:translateY(-8px);
     box-shadow:0 15px 35px rgba(0,0,0,.08);
+     -webkit-user-drag: none; 
 }
 
 .client-logo:hover img{
     filter:none;
     opacity:1;
     transform:scale(1.05);
+     pointer-events: none; 
+    user-select: none;     
+    -webkit-user-drag: none; 
+
 }
 
 
